@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <nav class="sidebar">
-        <p class="sidebar-header">側邊選單標題</p>
+        <h2 class="header">側邊選單標題</h2>
         <ul class="menu">
           <li>
             選單一
@@ -99,6 +99,14 @@
         </ul>
       </nav>
       <section class="main">
+        <h2 class="header select-header">側邊選單標題</h2>
+        <select name="form" id="form">
+          <option value="form-1">選單一</option>
+          <option value="form-2">選單二</option>
+          <option value="form-3">選單三</option>
+          <option value="form-4">選單四</option>
+          <option value="form-5" selected>選單五</option>
+        </select>
         <form action="#">
           <div class="input-group">
             <label for="form-control-1">欄位：一般欄位<span>*</span></label>
@@ -127,6 +135,43 @@
             <label for="form-control-5">欄位：一般欄位<span>*</span></label>
             <input id="form-control-5" type="text" placeholder="填入欄位資料" />
           </div>
+          <section class="content">
+            <p>我是不規則比例寬度區塊</p>
+            <div class="row">
+              <div class="description">
+                <h3>標題</h3>
+                <p>
+                  其他說明文字，其他說明文字，其他說明文字，其他說明文字，其他說明文字，其他說明文字。
+                </p>
+                <span
+                  >外連連結樣式：<a href="#" class="link"
+                    >這裡是連結樣式喔。</a
+                  ></span
+                >
+              </div>
+              <img
+                src="https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <div class="extra">
+                <h3>補充說明標題</h3>
+                <ul>
+                  <li>說明文字</li>
+                  <li>說明文字</li>
+                  <li>說明文字</li>
+                  <li>說明文字</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="button-group">
+            <button type="reset" class="btn btn-outline" value="Reset">
+              重填
+            </button>
+            <button type="submit" class="btn btn-primary" value="Submit">
+              儲存
+            </button>
+          </section>
         </form>
       </section>
     </div>

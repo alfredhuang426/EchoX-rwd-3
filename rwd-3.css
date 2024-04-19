@@ -7,26 +7,64 @@
 body {
   margin: 0px;
   background-color: #212121;
+  @media (max-width: 376px) {
+    margin: 20px;
+  }
 }
 
 .container {
   width: 80%;
   margin: 40px auto;
   display: flex;
+  @media (max-width: 376px) {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
 }
 
 .sidebar {
   width: 200px;
   padding-right: 30px;
   border-right: 1px solid #666666;
+  @media (max-width: 376px) {
+    display: none;
+  }
 }
 
-.sidebar-header {
+.header {
   font-size: 18px;
   font-weight: 500;
   line-height: 27px;
   color: #00ff62;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+}
+
+.select-header {
+  display: none;
+  @media (max-width: 376px) {
+    display: block;
+  }
+}
+
+select {
+  width: 100%;
+  padding: 14px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin-bottom: 35px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>');
+  background-repeat: no-repeat, repeat;
+  background-position: right 1rem center;
+  background-size: 20px 20px;
+  display: none;
+  @media (max-width: 376px) {
+    display: block;
+  }
 }
 
 .menu {
@@ -65,6 +103,11 @@ svg {
 .main {
   width: calc(100% - 200px);
   padding: 0 60px 30px 60px;
+  color: #fff;
+  @media (max-width: 376px) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .input-group {
@@ -77,9 +120,8 @@ svg {
 }
 
 .input-group label {
-  color: #fff;
   font-size: 16px;
-  line-height: 40px;
+  margin-bottom: 10px;
 }
 
 .input-group label span {
@@ -102,4 +144,126 @@ svg {
 
 .input-group input:disabled {
   background-color: #999999;
+}
+
+.content {
+  margin: 40px 0;
+  @media (max-width: 376px) {
+    margin: 20px 0 35px 0;
+  }
+}
+
+.content > p {
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  @media (max-width: 376px) {
+    display: block;
+  }
+}
+
+.description {
+  margin-right: 20px;
+  @media (max-width: 376px) {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.description h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #00ff62;
+  @media (max-width: 376px) {
+    margin-bottom: 10px;
+  }
+}
+
+.description p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.link {
+  color: #fff;
+}
+
+.row img {
+  width: 190px;
+  height: 174px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  margin-right: 20px;
+  @media (max-width: 376px) {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.extra {
+  flex-shrink: 0;
+}
+
+.extra h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 15px 0;
+}
+
+.extra ul {
+  padding-left: 24px;
+  margin: 0;
+}
+
+.button-group {
+  padding-top: 40px;
+  border-top: 1px solid #00ff62;
+  display: flex;
+  @media (max-width: 376px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.button-group button:not(:last-child) {
+  margin-right: 25px;
+  @media (max-width: 376px) {
+    margin-right: 0px;
+  }
+}
+
+.button-group button:not(:first-child) {
+  @media (max-width: 376px) {
+    margin-bottom: 20px;
+  }
+}
+
+.btn {
+  padding: 12px 62px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  border-radius: 4px;
+  @media (max-width: 376px) {
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  border: 1px solid #00ff62;
+  background-color: #00ff62;
+}
+
+.btn-outline {
+  border: 1px solid #666666;
+  background-color: rgba(0, 0, 0, 0);
+  color: #666666;
 }
